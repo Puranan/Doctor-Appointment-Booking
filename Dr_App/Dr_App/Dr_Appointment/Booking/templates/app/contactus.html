@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Contact Form </title>
+        <link rel="icon" type="text/x-icon" href="{% static 'logo.png' %}">
+<center>
+  <img src="{% static 'logo.png' %}" >
+</center>
+<link rel="stylesheet" href="{% static 'reg.css' %}">
+
+    </head>
+    <body>
+        <div class="container">
+                <h1><B> CONTACT US:</B></h1>
+                <HR>
+                <form action="{% url 'add' %}" method="post">
+                    {% csrf_token %}
+
+                        <tr>
+                            <td><b>Firstname: </b></td>
+                            <td><br><input type="text" name="firstname" REQUIRED></td>
+                        </tr>
+                         <tr>
+                            <td><b>Lastname:</b></td>
+                            <td><br><input type="text" name="lastname" required></td>
+                        </tr>
+                         <tr>
+                            <td><b>Email:</b></td>
+                            <td><br><input type="text" name="email" required></td>
+                        </tr>
+                         <tr>
+                            <td><b>Contact:</b></td>
+                            <td><br><input type="text" name="contact"  required></td>
+                        </tr>
+                           <td><input type="submit" value="Insert" class="registerbtn" ></td>
+
+                </form>
+
+        </div>
+
+    </body>
+</html>

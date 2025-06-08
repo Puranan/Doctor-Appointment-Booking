@@ -1,0 +1,40 @@
+<!--ANDREW'S SLOT-->
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <body>
+    <title>Andrew's Slot</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'slot.css' %}" media="all">
+    <center><b><label>Andrew's Slot</label></b></center>
+    <center>
+      <h1> {{message}}</h1>
+      <form action="{% url 'city' %}" method="post">
+        {% csrf_token %}
+            <div class="bus seat2-2 border-0 p-0">
+              <div class="seat-row-1">
+                <ol class="seats">
+                  <li class="seat">
+                    <input role="input-passenger-seat" name="name"  value="1"  type="checkbox">
+                    <label for="seat-radio-1-1">
+                                                                               1                                                                            </label>
+                  </li>
+                  <li class="seat">
+                    <input role="input-passenger-seat" name="name"  value="2"  type="checkbox">
+                    <label for="seat-radio-1-2">
+                                                                             2                                                                     </label>
+                  </li>
+                  <li class="seat">
+                    <input role="input-passenger-seat" name="name"  value="3"  type="checkbox">
+                    <label for="seat-radio-1-3">
+                                                                                3                                                                           </label>
+
+
+            <div class="text-left mt-2">
+             <!-- <button type="submit" value="city">BOOK</button> -->
+              <input type="submit" value="Book" >
+            </div>
+
+      </form>
+
+  </body>
+</html>
